@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini game guess color</title>
+  
+<style src="styles/mystyle.css"></style>
+</head>
+<body>
+<nav class="navbar" x-data>
+  <a href="#" class="navbar-logo"><span>Kin</span>Basari</a>
+  <div class="navbar-nav">
+</div>
+</nav>
+  <div class="content">
+    <div id="timer"></div>
+  <div id="colorText"></div>
+  <button id="correctButton" onclick="checkAnswer(true)">Benar</button>
+  <button id="wrongButton" onclick="checkAnswer(false)">Salah</button>
+  <p><span style="display: none;" id="score"></span></p>
+  <p id="gameOver"></p>
+  <audio id="correctSound" src="sound/kiwkiw.mp3"></audio>
+  <audio id="wrongSound" src="sound/rawgh.mp3"></audio>
+  <audio id="gameOverSound" src="sound/endgame.mp3"></audio>
+  <p><button id="restartButton" onclick="resetGame()" style="display: none;">Mulai Lagi</button></p>
+  </div>
+<div class="popup-overlay" id="popup">
+ <div class="popup-content">
+ <button onclick="closePopup()" class="close-popup">Start</button>
+ <h2>Aturan Permainan</h2>
+ <p></p>
+
+ <hr>
+ <div class="popup-paragraph">
+<span>1. Cara Bermain: </span>Pemain harus menebak warna yang sesuai dengan kata, jika kata ditulis dengan warna tepat maka tekan benar, jika sebaliknya maka tekan salah.
+<br><span>2. Tampilan: </span>Setiap putaran menampilkan satu kata di layar. Kata tersebut ditulis dalam warna tertentu yang bisa berbeda dengan arti kata itu sendiri.
+<br><span>3. Batas Waktu: </span>Setiap tebakan memiliki batas waktu 3 detik. Pemain harus menjawab sebelum waktu habis.
+<br><span>4. Penilaian: </span>Jawaban yang benar akan menambah poin dan jawaban yang salah akan meghentikan permainan.
+<br><span>5. Skor dan Peringkat: </span>Skor akan terus bertambah berdasarkan jumlah jawaban benar.
+<br><span>6. Permainan Berakhir: </span>Permainan akan berakhir jika pemain menebak pilihan yang salah atau kehabisan waktu.
+<p></p>
+<br>
+<p class="end-prg">Selamat bermain dan semoga sukses dalam menebak warna yang tepat!</p>
+</div>
+ </div>
+</div>
+
+<script src="scripts/myscript.js"></script>
+
+</body>
+</html>
