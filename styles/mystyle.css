@@ -101,8 +101,9 @@ button {
   user-select: none;
   height: 40px;
   }
-button:hover {
-  background-color: var(--opsi);
+button:active {
+  background-color: var(--pita);
+  transform: translateY(3px);
   }
   
 #timer {
